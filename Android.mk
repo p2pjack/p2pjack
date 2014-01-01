@@ -152,6 +152,15 @@ include $(BUILD_PREBUILT)
 # ect permisions
 #
 include $(CLEAR_VARS)
+LOCAL_MODULE       := mxt224_ts_input.idc
+
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := lib/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT)/usr/idc
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE       := android.hardware.usb.host.xml
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
@@ -195,6 +204,15 @@ include $(BUILD_PREBUILT)
 # lib
 #
 include $(CLEAR_VARS)
+LOCAL_MODULE       := libncurses.so
+
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_SRC_FILES    := lib/$(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_LIB)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE       := libAppDataSearch.so
 
 LOCAL_MODULE_TAGS  := optional
@@ -211,15 +229,6 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_SRC_FILES    := lib/$(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_OUT_LIB)
 include $(BUILD_PREBUILT)
-
-#include $(CLEAR_VARS)
-#LOCAL_MODULE       := libjni_latinime
-#LOCAL_SRC_FILES := lib/$(LOCAL_MODULE).so
-#LOCAL_MODULE_TAGS  := optional
-#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-#LOCAL_SRC_FILES    := $(LOCAL_MODULE)
-#LOCAL_MODULE_PATH  := $(TARGET_OUT_LIB)
-#include $(BUILD_PREBUILT)
 
 #
 # framework
